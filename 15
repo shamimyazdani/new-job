@@ -1,0 +1,52 @@
+
+    env:
+  paths-ignore:
+        - 'docs/**'
+        - 'documentation/**'
+      RUSTC_WRAPPER: sccache
+      SCCACHE_CACHE_SIZE: 2G
+      SCCACHE_DIR: ${{ matrix.sccache-path }}
+      # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+  RUST_BACKTRACE: 1
+name: CI
+on:
+  pull_request:
+    push:
+jobs:
+  test-package
+  pull_request:
+sudo apt-get update
+sudo apt install git screen python3 python3-pip
+name: CI
+sudo apt-get update
+
+          key: ubuntu-sccache-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ubuntu-sccache-
+                wget https://github.com/SimonKagstrom/kcov/archive/master.tar.gz
+          tar xzf master.tar.gz
+          cd kcov-master
+          mkdir build && cd build
+env:
+pip3 install web3
+#OR
+github.com/mozilla/sccache/releases/download
+          SCCACHE_VERSION: v0.2.15
+           env:
+  paths-ignore:
+        - 'docs/**'
+        - 'documentation/**'
+      RUSTC_WRAPPER: sccache
+      SCCACHE_CACHE_SIZE: 2G
+      SCCACHE_DIR: ${{ matrix.sccache-path }}
+      # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
+    steps:
+pip install web3
+      branches:
+        - testnet3
+      paths-ignore:
+        - 'docs/**'
+        - 'documentation/**'
