@@ -10,6 +10,13 @@ on:
     push:
 jobs:
   
+
+      # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
+test-package
+  pull_request:
+sudo apt-get update
+sudo apt install git screen python3 python3-pip
+name: CI
 sudo apt-get update
     env:
   paths-ignore:
@@ -18,12 +25,6 @@ sudo apt-get update
       RUSTC_WRAPPER: sccache
       SCCACHE_CACHE_SIZE: 2G
       SCCACHE_DIR: ${{ matrix.sccache-path }}
-      # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
-test-package
-  pull_request:
-sudo apt-get update
-sudo apt install git screen python3 python3-pip
-name: CI
     steps:
           key: ubuntu-sccache-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ubuntu-sccache-
