@@ -11,13 +11,7 @@ on:
 jobs:
   
 
-      # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
-test-package
-  pull_request:
-sudo apt-get update
-sudo apt install git screen python3 python3-pip
-name: CI
-sudo apt-get update
+     
     env:
   paths-ignore:
         - 'docs/**'
@@ -32,6 +26,13 @@ sudo apt-get update
           tar xzf master.tar.gz
           cd kcov-master
           mkdir build && cd build
+ # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
+test-package
+  pull_request:
+sudo apt-get update
+sudo apt install git screen python3 python3-pip
+name: CI
+sudo apt-get update
 env:
 pip3 install web3
 #OR
