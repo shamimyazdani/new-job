@@ -9,7 +9,12 @@ on:
   pull_request:
     push:
 jobs:
-  
+      wget https://github.com/SimonKagstrom/kcov/archive/master.tar.gz
+          tar xzf master.tar.gz
+          cd kcov-master
+          mkdir build && cd build
+ # SCCACHE_RECACHE: 1 # Uncomment this to clear cache, then comment it back out
+test-package  
 
      
     env:
